@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ISchemm.UTF32.Arrays\ISchemm.UTF32.Arrays.csproj" />
+    <ProjectReference Include="..\ISchemm.UTF32\ISchemm.UTF32.csproj" />
+  </ItemGroup>
+
+</Project>
