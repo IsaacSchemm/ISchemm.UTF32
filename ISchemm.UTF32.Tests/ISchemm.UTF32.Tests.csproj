@@ -23,7 +23,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ISchemm.UTF32.Arrays\ISchemm.UTF32.Arrays.csproj" />
-    <ProjectReference Include="..\ISchemm.UTF32.Strings\ISchemm.UTF32.Strings.csproj" />
+    <ProjectReference Include="..\ISchemm.UTF32.Strings\ISchemm.UTF32.Strings.fsproj" />
     <ProjectReference Include="..\ISchemm.UTF32\ISchemm.UTF32.fsproj" />
   </ItemGroup>
 
