@@ -6,7 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ISchemm.UTF32.Arrays\ISchemm.UTF32.Arrays.csproj" />
-    <ProjectReference Include="..\ISchemm.UTF32\ISchemm.UTF32.csproj" />
+    <ProjectReference Include="..\ISchemm.UTF32\ISchemm.UTF32.fsproj" />
   </ItemGroup>
 
 </Project>
