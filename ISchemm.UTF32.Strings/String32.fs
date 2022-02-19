@@ -5,6 +5,7 @@ open ISchemm.UTF32.Arrays
 open System.Collections
 open System.Collections.Generic
 
+[<Struct>]
 type String32 = {
     List: Char32 list
 } with
