@@ -35,7 +35,8 @@ namespace ISchemm.UTF32.Tests
             Char32 a = new Char32 { Value = 0x1f3ca };
             Char32 b = new Char32 { Value = 0x1f6a3 };
             Assert.IsTrue(b.CompareTo(a) > 0);
-            Assert.IsFalse(a.CompareTo(b) > 0);
+            Assert.IsTrue(a.CompareTo(b) < 0);
+            Assert.IsTrue(b.CompareTo(b) == 0);
         }
 
         [TestMethod]
