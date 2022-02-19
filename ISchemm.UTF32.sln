@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32126.315
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISchemm.UTF32", "ISchemm.UTF32\ISchemm.UTF32.csproj", "{D947933D-1BE9-4C85-A229-38D1609A67EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ISchemm.UTF32", "ISchemm.UTF32\ISchemm.UTF32.csproj", "{D947933D-1BE9-4C85-A229-38D1609A67EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISchemm.UTF32.Tests", "ISchemm.UTF32.Tests\ISchemm.UTF32.Tests.csproj", "{29C42694-17D0-4B86-9D0C-916D0B8BF0D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ISchemm.UTF32.Tests", "ISchemm.UTF32.Tests\ISchemm.UTF32.Tests.csproj", "{29C42694-17D0-4B86-9D0C-916D0B8BF0D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISchemm.UTF32.Arrays", "ISchemm.UTF32.Arrays\ISchemm.UTF32.Arrays.csproj", "{65C09EEE-7AA2-4F0B-9808-3CD8C61A4A7A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ISchemm.UTF32.Arrays", "ISchemm.UTF32.Arrays\ISchemm.UTF32.Arrays.csproj", "{65C09EEE-7AA2-4F0B-9808-3CD8C61A4A7A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISchemm.UTF32.Strings", "ISchemm.UTF32.Strings\ISchemm.UTF32.Strings.csproj", "{217B7F7E-C9D7-4350-95F6-7BC5EA99A10C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ISchemm.UTF32.Strings", "ISchemm.UTF32.Strings\ISchemm.UTF32.Strings.csproj", "{217B7F7E-C9D7-4350-95F6-7BC5EA99A10C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISchemm.UTF32.Bench", "ISchemm.UTF32.Bench\ISchemm.UTF32.Bench.csproj", "{1CD1320A-DC09-497F-A3AA-1B7C1A6B033E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{217B7F7E-C9D7-4350-95F6-7BC5EA99A10C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{217B7F7E-C9D7-4350-95F6-7BC5EA99A10C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{217B7F7E-C9D7-4350-95F6-7BC5EA99A10C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CD1320A-DC09-497F-A3AA-1B7C1A6B033E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CD1320A-DC09-497F-A3AA-1B7C1A6B033E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CD1320A-DC09-497F-A3AA-1B7C1A6B033E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CD1320A-DC09-497F-A3AA-1B7C1A6B033E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
