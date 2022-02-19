@@ -29,36 +29,6 @@ namespace ISchemm.UTF32
             return Value.GetHashCode();
         }
 
-        public static bool operator ==(Char32 left, Char32 right)
-        {
-            return left.Equals(right);
-        }
-
-        public static bool operator !=(Char32 left, Char32 right)
-        {
-            return !(left == right);
-        }
-
-        public static bool operator <(Char32 left, Char32 right)
-        {
-            return left.CompareTo(right) < 0;
-        }
-
-        public static bool operator >(Char32 left, Char32 right)
-        {
-            return left.CompareTo(right) > 0;
-        }
-
-        public static bool operator <=(Char32 left, Char32 right)
-        {
-            return left.CompareTo(right) <= 0;
-        }
-
-        public static bool operator >=(Char32 left, Char32 right)
-        {
-            return left.CompareTo(right) >= 0;
-        }
-
         public static Char32 FromArray(byte[] array, int index)
         {
             if (index + sizeof(int) > array.Length)

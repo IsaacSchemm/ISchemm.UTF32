@@ -21,7 +21,7 @@ namespace ISchemm.UTF32.Tests
             var str2 = String32.FromString(str);
             Assert.AreNotSame(str1, str2);
             Assert.IsTrue(str1.SequenceEqual(str2));
-            Assert.IsTrue(str1 == str2);
+            Assert.IsTrue(str2.GetType().IsValueType);
         }
 
         [TestMethod]

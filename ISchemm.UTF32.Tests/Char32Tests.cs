@@ -25,8 +25,7 @@ namespace ISchemm.UTF32.Tests
             Char32 b = new Char32 { Value = 0x1f6a3 };
             Assert.AreEqual(a, b);
             Assert.AreEqual(a.GetHashCode(), b.GetHashCode());
-            Assert.IsTrue(a == b);
-            Assert.IsFalse(a != b);
+            Assert.IsTrue(a.GetType().IsValueType);
             Assert.AreNotSame(a, b);
         }
 
@@ -35,8 +34,8 @@ namespace ISchemm.UTF32.Tests
         {
             Char32 a = new Char32 { Value = 0x1f3ca };
             Char32 b = new Char32 { Value = 0x1f6a3 };
-            Assert.IsTrue(b > a);
-            Assert.IsFalse(a > b);
+            Assert.IsTrue(b.CompareTo(a) > 0);
+            Assert.IsFalse(a.CompareTo(b) > 0);
         }
 
         [TestMethod]

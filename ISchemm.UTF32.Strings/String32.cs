@@ -6,23 +6,13 @@ using System.Linq;
 
 namespace ISchemm.UTF32.Strings
 {
-    public class String32 : IEquatable<String32>, IEnumerable<Char32>
+    public struct String32 : IEnumerable<Char32>, IEquatable<String32>
     {
         private readonly Char32[] _array;
 
         public String32(Char32[] array)
         {
             _array = array ?? throw new ArgumentNullException(nameof(array));
-        }
-
-        public override bool Equals(object obj)
-        {
-            return Equals(obj as String32);
-        }
-
-        public bool Equals(String32 other)
-        {
-            return other != null && _array.SequenceEqual(other._array);
         }
 
         public override int GetHashCode()
@@ -35,17 +25,14 @@ namespace ISchemm.UTF32.Strings
             return hash;
         }
 
-        public static bool operator ==(String32 b1, String32 b2)
+        public override bool Equals(object obj)
         {
-            if (b1 is null)
-                return b2 is null;
-
-            return b1.Equals(b2);
+            return obj is String32 str && Equals(str);
         }
 
-        public static bool operator !=(String32 b1, String32 b2)
+        public bool Equals(String32 other)
         {
-            return !(b1 == b2);
+            return _array.SequenceEqual(other._array);
         }
 
         public String32 Substring(int startIndex)
