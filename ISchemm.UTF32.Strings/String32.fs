@@ -31,21 +31,3 @@ type String32 = {
             (this.List :> System.Collections.IEnumerable).GetEnumerator()
         member this.GetEnumerator(): IEnumerator<Char32> = 
             (this.List :> seq<Char32>).GetEnumerator()
-
-    static member op_Equality (left: String32, right: String32) =
-        left = right
-
-    static member op_Inequality (left: String32, right: String32) =
-        left <> right
-
-    static member op_LessThanOrEqual (left: String32, right: String32) =
-        left <= right
-
-    static member op_GreaterThanOrEqual (left: String32, right: String32) =
-        left >= right
-
-    static member op_LessThan (left: String32, right: String32) =
-        left < right
-
-    static member op_GreaterThan (left: String32, right: String32) =
-        left > right

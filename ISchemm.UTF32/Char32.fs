@@ -28,21 +28,3 @@ type Char32 = {
     override this.ToString () =
         let array = this.ToArray ()
         Char32.Encoding.GetString array
-
-    static member op_Equality (left: Char32, right: Char32) =
-        left = right
-
-    static member op_Inequality (left: Char32, right: Char32) =
-        left <> right
-
-    static member op_LessThanOrEqual (left: Char32, right: Char32) =
-        left <= right
-
-    static member op_GreaterThanOrEqual (left: Char32, right: Char32) =
-        left >= right
-
-    static member op_LessThan (left: Char32, right: Char32) =
-        left < right
-
-    static member op_GreaterThan (left: Char32, right: Char32) =
-        left > right
