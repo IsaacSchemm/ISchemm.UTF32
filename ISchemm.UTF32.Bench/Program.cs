@@ -34,7 +34,7 @@ namespace ISchemm.UTF32.Bench
             Console.WriteLine(DateTime.Now - dt);
 
             Console.WriteLine("Edgar Allan Poe");
-            Console.WriteLine(String32.FromString(str3).Substring(9, 15));
+            Console.WriteLine(String32.FromString(str2).Substring(9, 15));
         }
     }
 }
