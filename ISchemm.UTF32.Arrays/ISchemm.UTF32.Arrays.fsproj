@@ -7,11 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="String32.fs" />
+    <Compile Include="Library.fs" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ISchemm.UTF32.Arrays\ISchemm.UTF32.Arrays.fsproj" />
     <ProjectReference Include="..\ISchemm.UTF32\ISchemm.UTF32.fsproj" />
   </ItemGroup>
 

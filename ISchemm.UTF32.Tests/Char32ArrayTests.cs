@@ -16,7 +16,7 @@ namespace ISchemm.UTF32.Tests
             Assert.AreNotSame(arr1, arr2);
             Assert.AreNotEqual(arr1, arr2);
             Assert.IsTrue(arr1.SequenceEqual(arr2));
-            Assert.AreEqual(arr1.GetString(), arr2.GetString());
+            Assert.AreEqual(Char32Array.GetString(arr1), Char32Array.GetString(arr2));
         }
     }
 }
