@@ -8,26 +8,35 @@ open System.Collections.Generic
 type String32 = {
     List: Char32 list
 } with
-    member this.Substring (startIndex: int) =
-        { List = this.List.[startIndex..] }
-
-    member this.Substring (startIndex: int, length: int) =
-        { List = this.List.[startIndex..startIndex+length-1] }
+    static member FromList (list: Char32 list) = { List = list }
 
     static member FromEnumerable (src: seq<Char32>) =
-        { List = List.ofSeq src }
+        src
+        |> List.ofSeq
+        |> String32.FromList
 
     static member FromString (str: string) =
         str
         |> Char32Array.FromString
         |> String32.FromEnumerable
 
+    member this.Length = List.length this.List
+    member this.Item index = this.List.[index]
+
+    member this.GetSlice (startIndex, endIndex) =
+        this.List.GetSlice (startIndex, endIndex)
+        |> String32.FromList
+
+    member this.Substring (startIndex) = this.[startIndex..]
+    member this.Substring (startIndex, length) = this.[startIndex..startIndex + length - 1]
+
     override this.ToString () =
-        Array.ofList this.List
+        this.List
+        |> Array.ofList
         |> Char32Array.GetString
 
-    interface seq<Char32> with
-        member this.GetEnumerator(): IEnumerator =
-            (this.List :> System.Collections.IEnumerable).GetEnumerator()
-        member this.GetEnumerator(): IEnumerator<Char32> = 
-            (this.List :> seq<Char32>).GetEnumerator()
+    interface IReadOnlyList<Char32> with
+        member this.Count: int = this.Length
+        member this.GetEnumerator(): IEnumerator = (this.List :> IEnumerable).GetEnumerator()
+        member this.GetEnumerator(): IEnumerator<Char32> = (this.List :> seq<Char32>).GetEnumerator()
+        member this.Item with get (index: int): Char32 = this.List.[index]

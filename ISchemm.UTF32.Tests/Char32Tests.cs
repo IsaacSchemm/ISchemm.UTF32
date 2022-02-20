@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using System.Linq;
 
 namespace ISchemm.UTF32.Tests
 {
@@ -44,20 +45,8 @@ namespace ISchemm.UTF32.Tests
         {
             Char32 a = new Char32(0x1f3ca);
             Assert.AreEqual("🏊", $"{a}");
-            Char32 b = Char32.FromString("🏊");
+            Char32 b = String32.FromString("🏊").Single();
             Assert.AreEqual(a, b);
-        }
-
-        [TestMethod, ExpectedException(typeof(FormatException))]
-        public void TestTooShort()
-        {
-            Char32.FromString("");
-        }
-
-        [TestMethod, ExpectedException(typeof(FormatException))]
-        public void TestTooLong()
-        {
-            Char32.FromString("🇦🇹");
         }
     }
 }
