@@ -1,7 +1,6 @@
-﻿namespace ISchemm.UTF32.Strings
+﻿namespace ISchemm.UTF32
 
 open ISchemm.UTF32
-open ISchemm.UTF32.Arrays
 open System.Collections
 open System.Collections.Generic
 

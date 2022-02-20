@@ -8,6 +8,8 @@
 
   <ItemGroup>
     <Compile Include="Char32.fs" />
+    <Compile Include="Char32Array.fs" />
+    <Compile Include="String32.fs" />
   </ItemGroup>
 
 </Project>

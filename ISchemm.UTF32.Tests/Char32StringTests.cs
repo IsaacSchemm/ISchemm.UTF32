@@ -1,4 +1,4 @@
-﻿using ISchemm.UTF32.Strings;
+﻿using ISchemm.UTF32;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Linq;
 

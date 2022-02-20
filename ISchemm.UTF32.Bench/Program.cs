@@ -1,4 +1,4 @@
-﻿using ISchemm.UTF32.Strings;
+﻿using ISchemm.UTF32;
 using System;
 
 namespace ISchemm.UTF32.Bench

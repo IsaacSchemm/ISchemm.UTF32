@@ -7,11 +7,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ISchemm.UTF32.Tests", "ISch
 EndProject
 Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "ISchemm.UTF32", "ISchemm.UTF32\ISchemm.UTF32.fsproj", "{65A560DD-45E9-46C2-8B5C-69243221EDFF}"
 EndProject
-Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "ISchemm.UTF32.Strings", "ISchemm.UTF32.Strings\ISchemm.UTF32.Strings.fsproj", "{FAB9BA66-AB72-4295-A1D3-6FFC3EC6A0ED}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ISchemm.UTF32.Bench", "ISchemm.UTF32.Bench\ISchemm.UTF32.Bench.csproj", "{1CD1320A-DC09-497F-A3AA-1B7C1A6B033E}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ISchemm.UTF32.Arrays", "ISchemm.UTF32.Arrays\ISchemm.UTF32.Arrays.fsproj", "{48A545A6-B5E3-49FC-A32E-D013B1B61DB2}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D0E0E864-5340-4160-B7B1-4403C5B3F039}"
+	ProjectSection(SolutionItems) = preProject
+		COPYING.txt = COPYING.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,18 +28,10 @@ Global
 		{65A560DD-45E9-46C2-8B5C-69243221EDFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{65A560DD-45E9-46C2-8B5C-69243221EDFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{65A560DD-45E9-46C2-8B5C-69243221EDFF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FAB9BA66-AB72-4295-A1D3-6FFC3EC6A0ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FAB9BA66-AB72-4295-A1D3-6FFC3EC6A0ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FAB9BA66-AB72-4295-A1D3-6FFC3EC6A0ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FAB9BA66-AB72-4295-A1D3-6FFC3EC6A0ED}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1CD1320A-DC09-497F-A3AA-1B7C1A6B033E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1CD1320A-DC09-497F-A3AA-1B7C1A6B033E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1CD1320A-DC09-497F-A3AA-1B7C1A6B033E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1CD1320A-DC09-497F-A3AA-1B7C1A6B033E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{48A545A6-B5E3-49FC-A32E-D013B1B61DB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{48A545A6-B5E3-49FC-A32E-D013B1B61DB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{48A545A6-B5E3-49FC-A32E-D013B1B61DB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{48A545A6-B5E3-49FC-A32E-D013B1B61DB2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

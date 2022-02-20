@@ -1,11 +1,10 @@
 ﻿#nowarn "9"
 
-namespace ISchemm.UTF32.Arrays
+namespace ISchemm.UTF32
 
 open System
 open System.Runtime.InteropServices
 open Microsoft.FSharp.NativeInterop
-open ISchemm.UTF32
 
 module Char32Array =
     let FromByteArray (bArr: byte[]): Char32[] =
