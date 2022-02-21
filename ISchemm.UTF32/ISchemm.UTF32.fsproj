@@ -4,6 +4,14 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <WarnOn>3390;$(WarnOn)</WarnOn>
+    <Authors>Isaac Schemm</Authors>
+    <Product />
+    <Description>UTF-32 character and string processing for .NET</Description>
+    <Copyright>(C) 2022 Isaac Schemm</Copyright>
+    <PackageLicenseFile>COPYING.txt</PackageLicenseFile>
+    <PackageLicenseExpression>MIT-0</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/IsaacSchemm/ISchemm.UTF32</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/IsaacSchemm/ISchemm.UTF32</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
