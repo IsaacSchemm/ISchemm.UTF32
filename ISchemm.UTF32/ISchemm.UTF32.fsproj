@@ -11,6 +11,7 @@
     <PackageLicenseExpression>MIT-0</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/IsaacSchemm/ISchemm.UTF32</PackageProjectUrl>
     <RepositoryUrl>https://github.com/IsaacSchemm/ISchemm.UTF32</RepositoryUrl>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>

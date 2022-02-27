@@ -1,4 +1,5 @@
 ﻿using ISchemm.UTF32;
+using Microsoft.FSharp.Collections;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Linq;
 
@@ -7,6 +8,16 @@ namespace ISchemm.UTF32.Tests
     [TestClass]
     public class Char32StringTests
     {
+        [TestMethod]
+        public void TestEmpty()
+        {
+            var a = String32.FromList(ListModule.Empty<Char32>());
+            var b = String32.FromEnumerable(Enumerable.Empty<Char32>());
+            Assert.AreEqual(a, b);
+            var c = String32.FromString("");
+            Assert.AreEqual(a, c);
+        }
+
         [TestMethod]
         public unsafe void TestConversion()
         {

@@ -15,10 +15,20 @@ type String32 = {
         |> List.ofSeq
         |> String32.FromList
 
+    static member ToEnumerable (src: String32) =
+        src :> seq<Char32>
+
     static member FromString (str: string) =
         str
         |> Char32Array.FromString
         |> String32.FromEnumerable
+
+    static member ToString (src: String32) =
+        src.List
+        |> Array.ofList
+        |> Char32Array.GetString
+
+    static member Empty = { List = [] }
 
     member this.Length = List.length this.List
     member this.Item index = this.List.[index]
@@ -30,10 +40,7 @@ type String32 = {
     member this.Substring (startIndex) = this.[startIndex..]
     member this.Substring (startIndex, length) = this.[startIndex..startIndex + length - 1]
 
-    override this.ToString () =
-        this.List
-        |> Array.ofList
-        |> Char32Array.GetString
+    override this.ToString () = String32.ToString this
 
     interface IReadOnlyList<Char32> with
         member this.Count: int = this.Length
