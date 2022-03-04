@@ -91,3 +91,45 @@ type String32 = {
         member this.GetEnumerator(): IEnumerator = (this.List :> IEnumerable).GetEnumerator()
         member this.GetEnumerator(): IEnumerator<Char32> = (this.List :> seq<Char32>).GetEnumerator()
         member this.Item with get (index: int): Char32 = this.List.[index]
+
+module String32Replacement =
+    type ISegment =
+        abstract member StartIndex: int
+        abstract member EndIndex: int
+        abstract member ReplacementValue: String32
+
+    let private Omit a b = {
+        new ISegment with
+            member __.StartIndex = a
+            member __.EndIndex = b
+            member __.ReplacementValue = String32.Empty
+    }
+
+    let DisplayRange (displayStartIndex: int, displayEndIndex: int) = seq {
+        Omit 0 displayStartIndex
+        Omit displayEndIndex System.Int32.MaxValue
+    }
+
+    let rec private Apply (remaining: ISegment list) (str: String32) = seq {
+        match remaining with
+        | [] ->
+            yield str
+        | e::tail ->
+            let startIndex = max 0 e.StartIndex
+            let endIndex = min str.Length e.EndIndex
+
+            yield str.[endIndex ..]
+            yield e.ReplacementValue
+            yield! Apply tail str.[.. startIndex - 1]
+    }
+
+    let Replace (segments: seq<ISegment>) (str: String32) =
+        str
+        |> Apply
+            (segments
+            |> Seq.rev
+            |> Seq.sortByDescending (fun x -> x.EndIndex)
+            |> Seq.toList)
+        |> Seq.rev
+        |> Seq.collect id
+        |> String32.FromEnumerable
